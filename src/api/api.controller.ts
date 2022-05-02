@@ -4,8 +4,8 @@ import { routeConfig as helloParamConfig } from './routes/hello/nameParam';
 
 /**
  * This is the core controller for API routes. To create routes for the API,
- * simply create a new route under the routes folder, and export an async
- * handler function, and a routeConfig object that contains the path for the route
+ * simply create a new route under the routes folder, create an async
+ * handler function, and export a routeConfig object that contains the path for the route
  * and the handler function. Import it into this file and add it under the
  * ApiController class.
  * 
