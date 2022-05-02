@@ -14,13 +14,26 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ApiController = void 0;
 const common_1 = require("@nestjs/common");
+const hello_1 = require("./routes/hello/hello");
+const helloParam_1 = require("./routes/hello/helloParam");
 let ApiController = class ApiController {
+    executeHelloHandler(req, res) {
+        return hello_1.routeConfig.handler(req, res);
+    }
     executeHandler(req, res) {
-        return handler(req, res);
+        return helloParam_1.routeConfig.handler(req, res);
     }
 };
 __decorate([
-    (0, common_1.All)(),
+    (0, common_1.All)(hello_1.routeConfig.path),
+    __param(0, (0, common_1.Req)()),
+    __param(1, (0, common_1.Res)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], ApiController.prototype, "executeHelloHandler", null);
+__decorate([
+    (0, common_1.All)(helloParam_1.routeConfig.path),
     __param(0, (0, common_1.Req)()),
     __param(1, (0, common_1.Res)()),
     __metadata("design:type", Function),
@@ -31,7 +44,4 @@ ApiController = __decorate([
     (0, common_1.Controller)('api')
 ], ApiController);
 exports.ApiController = ApiController;
-async function handler(req, res) {
-    res.send('Request url from handler: ' + req.url);
-}
 //# sourceMappingURL=api.controller.js.map
