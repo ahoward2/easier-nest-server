@@ -1,5 +1,7 @@
 async function handler(req, res) {
-  res.send('Request param from handler: ' + req.params.name);
+  if (req.method === 'GET') {
+    return res.json({ message: `Hello ${req.params.name}!` });
+  }
 }
 
 export const routeConfig = {

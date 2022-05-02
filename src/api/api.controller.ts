@@ -23,12 +23,12 @@ import { routeConfig as helloParamConfig } from './routes/hello/helloParam';
 @Controller('api')
 export class ApiController {
   @All(helloConfig.path)
-  executeHelloHandler(@Req() req, @Res() res) {
+  async executeHelloHandler(@Req() req, @Res() res) {
     return helloConfig.handler(req, res);
   }
 
   @All(helloParamConfig.path)
-  executeHandler(@Req() req, @Res() res) {
+  async executeHelloNameHandler(@Req() req, @Res() res) {
     return helloParamConfig.handler(req, res);
   }
 }
