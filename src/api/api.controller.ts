@@ -1,6 +1,6 @@
 import { All, Controller, Req, Res } from '@nestjs/common';
 import { routeConfig as helloConfig } from './routes/hello/hello';
-import { routeConfig as helloParamConfig } from './routes/hello/helloParam';
+import { routeConfig as helloParamConfig } from './routes/hello/nameParam';
 
 /**
  * This is the core controller for API routes. To create routes for the API,
