@@ -1,1 +1,0 @@
-{"version":3,"file":"helloParam.js","sourceRoot":"","sources":["../../../../src/api/routes/hello/helloParam.ts"],"names":[],"mappings":";;;AAAA,KAAK,UAAU,OAAO,CAAC,GAAG,EAAE,GAAG;IAC7B,GAAG,CAAC,IAAI,CAAC,8BAA8B,GAAG,GAAG,CAAC,MAAM,CAAC,IAAI,CAAC,CAAC;AAC7D,CAAC;AAEY,QAAA,WAAW,GAAG;IACzB,IAAI,EAAE,cAAc;IACpB,OAAO,EAAE,OAAO;CACjB,CAAC"}
