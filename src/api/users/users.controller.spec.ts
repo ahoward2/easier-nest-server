@@ -12,25 +12,24 @@ describe('UsersController', () => {
     usersController = app.get<UsersController>(UsersController);
   });
 
-  describe('GET /api/hello/:name', () => {
-    it('should return {"message":"Hello Austin!"}', async () => {
+  describe('GET /api/users/detail?github=ahoward2&gitlab=ahoward21', () => {
+    it('should return {"github":"ahoward2", "gitlab": "ahoward21"}', async () => {
       const mockResult = {
-        message: 'Hello Austin!',
+        github: 'ahoward2',
+        gitlab: 'ahoward21',
       };
       const mockRequest = {
         method: 'GET',
-        params: {
-          name: 'Austin',
+        query: {
+          github: 'ahoward2',
+          gitlab: 'ahoward21',
         },
       };
       const mockResponse = {
         json: jest.fn().mockReturnValue(mockResult),
       };
       expect(
-        await usersController.executeHelloNameHandler(
-          mockRequest,
-          mockResponse,
-        ),
+        await usersController.executeUserDetail(mockRequest, mockResponse),
       ).toBe(mockResult);
     });
   });

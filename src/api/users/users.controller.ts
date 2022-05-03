@@ -24,7 +24,7 @@ import { RouteConfig as UserDetailConfig } from './routes/users/user.detail';
 @Controller('api/users')
 export class UsersController {
   @All(UserDetailConfig.path)
-  async executeHelloNameHandler(@Req() req, @Res() res) {
+  async executeUserDetail(@Req() req, @Res() res) {
     return UserDetailConfig.handler(req, res);
   }
 }
