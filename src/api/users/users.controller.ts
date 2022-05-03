@@ -1,6 +1,5 @@
 import { All, Controller, Req, Res } from '@nestjs/common';
-import { routeConfig as helloConfig } from './routes/hello/hello';
-import { routeConfig as helloParamConfig } from './routes/hello/nameParam';
+import { RouteConfig as UserDetailConfig } from './routes/users/user.detail';
 
 /**
  * This is the core controller for API routes. To create routes for the API,
@@ -22,15 +21,10 @@ import { routeConfig as helloParamConfig } from './routes/hello/nameParam';
     handler: handler,
   };
  */
-@Controller('api')
-export class ApiController {
-  @All(helloConfig.path)
-  async executeHelloHandler(@Req() req, @Res() res) {
-    return helloConfig.handler(req, res);
-  }
-
-  @All(helloParamConfig.path)
+@Controller('api/users')
+export class UsersController {
+  @All(UserDetailConfig.path)
   async executeHelloNameHandler(@Req() req, @Res() res) {
-    return helloParamConfig.handler(req, res);
+    return UserDetailConfig.handler(req, res);
   }
 }
