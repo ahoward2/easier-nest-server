@@ -12,7 +12,7 @@ export type Message = {
 
 const message: Message = [
   {
-    title: 'Welcome to easier nest server',
+    title: 'Welcome to easier nest server!',
     subtitle:
       'This is a simple nest server that uses only controllers and functional handlers',
     routes: [
